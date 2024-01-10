@@ -1,0 +1,29 @@
+1. The runtimes for the dot product implementation were as follows: 
+
+	dot_double_c took    11.8 ms
+          dot_double took    13.6 ms
+        dot_single_c took     9.7 ms
+          dot_single took    11.8 ms
+
+Based on these results, I can make a few observations: The dingles method seems to be faster in general, with both implementations using singles being faster than their double counterparts, and once again, the C implementations seem to outperform their assembly counterparts, though this was expected. 
+
+2. The results of the polynomial calculation were as follows:
+
+       map_poly_double_c1 took    17.2 ms
+       map_poly_double_c2 took    11.3 ms
+          map_poly_double took    13.4 ms
+        map_poly_single_c took     5.8 ms
+          map_poly_single took     9.0 ms
+
+Based on these results, it is obvious that the singles version of the implementation was much faster than the doubles versions, with the assembly implementation of the singles version beating the two C version implementations of the doubles method, so the difference was indeed more obvious here than in the dot product.
+
+3. Using the testing method I implemented in the main function of sin.c, my results were as follows, using an array length of 100000, the average results were:
+
+	sin_stdlib took     0.5 ms
+        sin_x87    took     2.3 ms
+
+Based on this, I can say that the C library function sin is roughly 4-5 times faster than the assembly method provided using x87, at least based on the results from my tests. When the array size was increased by 10x, the timings were also roughly 10x, so I assume they both scale linearly. 
+	
+
+
+
