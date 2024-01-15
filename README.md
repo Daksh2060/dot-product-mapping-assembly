@@ -1,6 +1,6 @@
 # Dot Product and Polynomial Mapping in ASM x86
 
-
+This Assembly x86 project implmenets a dot product and polynimoial mapping function for C float arrays. There is a 32-bit and 64-bit for both functions, accomodating both single and double precision float arrays. The dot product functions return the dot product of two equal sized arrays, while the polynomial mapping function is used to pass all indices of an array through a polynomial. There is an equivalent implmenetation in C for each Assembly function for comparison of performance. 
 
 ## Features
 
